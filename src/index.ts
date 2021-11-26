@@ -51,3 +51,10 @@ type _LTE3 = LessThanEqual<Zero, Two> // true
 type _LTE4 = LessThanEqual<Four, Two> // false
 type _LTE5 = LessThanEqual<1, Zero> // never
 type _LTE6 = LessThanEqual<One, 0> // never
+
+type _LT1 = LessThan<One, One> // false
+type _LT2 = LessThan<Zero, Zero> // false
+type _LT3 = LessThan<Zero, Two> // true
+type _LT4 = LessThan<Four, Two> // false
+type _LT5 = LessThan<1, Zero> // never
+type _LT6 = LessThan<One, 0> // never
