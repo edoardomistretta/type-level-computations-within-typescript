@@ -13,6 +13,5 @@ I was inspired by:
 - [Ryan Dabler's article](https://itnext.io/implementing-arithmetic-within-typescripts-type-system-a1ef140a6f6f)
 
 ### To Do
-- `Product<N, M>`
 - `Raised<N, M>`
 - `Quotient<N, M>`
