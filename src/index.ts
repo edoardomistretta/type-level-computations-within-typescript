@@ -5,6 +5,7 @@ import { Increment } from "./types/Increment";
 import { LessThan } from "./types/LessThan";
 import { LessThanEqual } from "./types/LessThanEqual";
 import { Max } from "./types/Max";
+import { Min } from "./types/Min";
 import { One, Two, Zero, Four, Three } from "./types/Numbers";
 import { Sum } from "./types/Sum";
 
@@ -31,12 +32,12 @@ type _GTE3 = GreatherThanEqual<Zero, One> // false
 type _GTE4 = GreatherThanEqual<Zero, 0> // never
 type _GTE5 = GreatherThanEqual<0, Zero> // never
 
-type _M1 = Equals<One, Max<One, Zero>> // true
-type _M2 = Equals<One, Max<One, One>> // true
-type _M3 = Equals<One, Max<Zero, One>> // true
-type _M4 = Equals<One, Max<Zero, Two>> // false
-type _M5 = Equals<One, Max<1, One>> // never
-type _M6 = Equals<One, Max<One, 1>> // never
+type _MAX1 = Equals<One, Max<One, Zero>> // true
+type _MAX2 = Equals<One, Max<One, One>> // true
+type _MAX3 = Equals<One, Max<Zero, One>> // true
+type _MAX4 = Equals<One, Max<Zero, Two>> // false
+type _MAX5 = Equals<One, Max<1, One>> // never
+type _MAX6 = Equals<One, Max<One, 1>> // never
 
 type _GT1 = GreatherThan<One, One> // false
 type _GT2 = GreatherThan<Zero, Zero> // false
@@ -58,3 +59,10 @@ type _LT3 = LessThan<Zero, Two> // true
 type _LT4 = LessThan<Four, Two> // false
 type _LT5 = LessThan<1, Zero> // never
 type _LT6 = LessThan<One, 0> // never
+
+type _MIN1 = Equals<One, Min<One, One>> // true
+type _MIN2 = Equals<Zero, Min<Zero, Zero>> // true
+type _MIN3 = Equals<Zero, Min<Zero, Two>> // true
+type _MIN4 = Equals<Two, Min<Four, Two>> // true
+type _MIN5 = Equals<Zero, Min<1, Zero>> // never
+type _MIN6 = Equals<Zero, Min<One, 0>> // never
