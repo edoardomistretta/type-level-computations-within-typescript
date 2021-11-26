@@ -1,0 +1,17 @@
+{
+  "name": "typescript-arithmetic-at-type-level",
+  "author": {
+    "name" : "Edoardo Mistretta",
+    "url" : "https://github.com/edoardomistretta"
+  },
+  "description": "Arithmetic with type-level programming in TypeScript",
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "type-level-programming",
+    "metaprogramming"
+  ],
+  "devDependencies": {
+      "typescript": "^4.1.2"
+  }
+}
