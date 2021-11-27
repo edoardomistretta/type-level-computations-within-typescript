@@ -1,3 +1,4 @@
+import { Diff } from "./types/Diff";
 import { Equals } from "./types/Equals";
 import { GreatherThan } from "./types/GreatherThan";
 import { GreatherThanEqual } from "./types/GreatherThanEqual";
@@ -86,3 +87,11 @@ type _POW6 = Equals<One, Power<Three, Zero>> // true
 type _POW7 = Equals<Nine, Power<Three, Two>> // true
 type _POW8 = Equals<Zero, Power<1, Zero>> // never
 type _POW9 = Equals<Zero, Power<One, 0>> // never
+
+type _D1 = Equals<One, Diff<Two, One>> // true
+type _D2 = Equals<Zero, Diff<Two, Two>> // true
+type _D3 = Equals<Zero, Diff<Zero, Zero>> // true
+type _D4 = Equals<Five, Diff<Nine, Four>> // true
+type _D5 = Diff<Zero, One> // never
+type _D6 = Diff<1, One> // never
+type _D7 = Diff<Two, 2> // never

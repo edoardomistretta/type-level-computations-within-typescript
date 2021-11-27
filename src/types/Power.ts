@@ -1,6 +1,5 @@
 import { One, Succ, Zero } from "./Numbers";
 import { Product } from "./Product";
-import { Sum } from "./Sum";
 
 export type Power<Base, Exp, Accumulator = Base> =
   Base extends Zero

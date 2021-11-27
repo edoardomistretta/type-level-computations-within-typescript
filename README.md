@@ -13,6 +13,5 @@ I was inspired by:
 - [Ryan Dabler's article](https://itnext.io/implementing-arithmetic-within-typescripts-type-system-a1ef140a6f6f)
 
 ### To Do
-- `Diff<N, M>`
 - `Div<N, M>`
 - `Remainder<N, M>`
