@@ -6,7 +6,8 @@ import { LessThan } from "./types/LessThan";
 import { LessThanEqual } from "./types/LessThanEqual";
 import { Max } from "./types/Max";
 import { Min } from "./types/Min";
-import { One, Two, Zero, Four, Three, Eight } from "./types/Numbers";
+import { Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten } from "./types/Numbers";
+import { Power } from "./types/Power";
 import { Product } from "./types/Product";
 import { Sum } from "./types/Sum";
 
@@ -75,3 +76,13 @@ type _P4 = Equals<Eight, Product<Four, Two>> // true
 type _P5 = Equals<Four, Product<Two, Two>> // true
 type _P6 = Equals<Zero, Product<1, Zero>> // never
 type _P7 = Equals<Zero, Product<One, 0>> // never
+
+type _POW1 = Equals<One, Power<One, One>> // true
+type _POW2 = Equals<One, Power<Zero, Zero>> // true
+type _POW3 = Equals<Zero, Power<Zero, Two>> // true
+type _POW4 = Equals<One, Power<One, Three>> // true
+type _POW5 = Equals<Eight, Power<Two, Three>> // true
+type _POW6 = Equals<One, Power<Three, Zero>> // true
+type _POW7 = Equals<Nine, Power<Three, Two>> // true
+type _POW8 = Equals<Zero, Power<1, Zero>> // never
+type _POW9 = Equals<Zero, Power<One, 0>> // never
