@@ -1,20 +1,15 @@
 import { Equals } from "./Equals";
-import { Increment } from "./Increment";
-import { Succ, Zero } from "./Numbers";
+import { LessThan } from "./LessThan";
+import { Decrement } from "./Decrement";
+import { Zero } from "./Numbers";
 
-export type Diff<N, M, Accumulator = Zero> =
-  N extends Succ<infer PN>
-    ? M extends Succ<infer _PM>
-      ? Equals<N, M> extends true
-        ? Accumulator
-        : Equals<N, M> extends false
-          ? Diff<PN, M, Increment<Accumulator>>
-          : never
-      : M extends Zero
-        ? N
-        : never
-    : N extends Zero
-      ? M extends Zero
-        ? Zero
-        : never
-      : never;
+export type Diff<N, M> =
+  Equals<N, M> extends never
+    ? never
+    : Equals<N, M> extends true
+      ? Zero
+      : LessThan<N, M> extends true
+        ? never
+        : M extends Zero
+          ? N
+          : Diff<Decrement<N>, Decrement<M>>;
