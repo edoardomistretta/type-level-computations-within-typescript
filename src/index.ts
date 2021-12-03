@@ -10,6 +10,7 @@ import { Min } from "./types/Min";
 import { Zero, One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten } from "./types/Numbers";
 import { Power } from "./types/Power";
 import { Product } from "./types/Product";
+import { Quotient } from "./types/Quotient";
 import { Sum } from "./types/Sum";
 
 type _E1 = Equals<One, One> // true
@@ -96,3 +97,13 @@ type _D5 = Diff<Eight, Nine> // never
 type _D6 = Diff<Zero, One> // never
 type _D7 = Diff<1, One> // never
 type _D8 = Diff<Two, 2> // never
+
+type _Q1 = Equals<Two, Quotient<Two, One>> // true
+type _Q2 = Equals<One, Quotient<Two, Two>> // true
+type _Q3 = Equals<Zero, Quotient<Zero, One>> // true
+type _Q4 = Equals<Two, Quotient<Nine, Four>> // true
+type _Q5 = Equals<Three, Quotient<Nine, Three>> // true
+type _Q6 = Equals<Four, Quotient<Nine, Two>> // true
+type _Q8 = Quotient<Zero, Zero> // never
+type _Q9 = Quotient<1, One> // never
+type _Q10 = Quotient<Two, 2> // never
