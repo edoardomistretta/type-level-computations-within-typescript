@@ -9,8 +9,10 @@ This repository contains TypeScript code that attempts to execute some computati
 To fully understand the TypeScript's type system and play with it I tryed to rewrite some basic arithmetic computations working on a type level.
 
 I was inspired by:
+- [Gabriele Lana](https://github.com/gabrielelana)
 - [fwcd/tylude](https://github.com/fwcd/tylude)
 - [Ryan Dabler's article](https://itnext.io/implementing-arithmetic-within-typescripts-type-system-a1ef140a6f6f)
 
 ### To Do
+- `FizzBuzz`
 - `Remainder<N, M>`
